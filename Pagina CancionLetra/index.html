@@ -1,0 +1,366 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Canciones para Anahí🫶🏼</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- FONDO -->
+  <div class="sky">
+
+    <div class="moon"></div>
+
+    <div class="stars"></div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+  </div>
+
+  <!-- PLAYLIST -->
+  <div class="container" id="playlistScreen">
+
+    <h1 class="main-title">
+      Canciones para Anahí ❤️
+    </h1>
+
+    <p class="subtitle">
+      Ojalá estas canciones puedan decir
+un poquito de todo lo que no sé explicar ✨
+    </p>
+
+    <!-- LISTA -->
+    <div class="songs-list">
+
+      <!-- ANNIE -->
+      <div
+        class="song-item playable"
+        data-song="annie"
+      >
+
+        <img
+          src="covers/annie.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Annie</h3>
+          <p>Wave to Earth</p>
+
+        </div>
+
+      </div>
+
+      <!-- BESO -->
+      <div
+        class="song-item playable"
+        data-song="beso"
+      >
+
+        <img
+          src="covers/beso.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Beso</h3>
+          <p>Jósean Log</p>
+
+        </div>
+
+      </div>
+
+      <!-- ERES CD9 -->
+      <div
+        class="song-item playable"
+        data-song="eres"
+      >
+
+        <img
+          src="covers/eres-cd9.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Eres</h3>
+          <p>CD9</p>
+
+        </div>
+
+      </div>
+
+      <!-- ERES TACVBA -->
+      <div
+        class="song-item playable"
+        data-song="eresTacvba"
+      >
+
+        <img
+          src="covers/eres.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Eres</h3>
+          <p>Café Tacvba</p>
+
+        </div>
+
+      </div>
+
+      <!-- GLUE SONG -->
+      <div
+        class="song-item playable"
+        data-song="gluesong"
+      >
+
+        <img
+          src="covers/gluesong.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Glue Song</h3>
+          <p>Beabadoobee</p>
+
+        </div>
+
+      </div>
+
+      <!-- LOVER -->
+      <div
+        class="song-item playable"
+        data-song="lover"
+      >
+
+        <img
+          src="covers/lover.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Lover</h3>
+          <p>Taylor Swift</p>
+
+        </div>
+
+      </div>
+
+      <!-- MI SUERTE -->
+      <div
+        class="song-item playable"
+        data-song="misuerte"
+      >
+
+        <img
+          src="covers/misuerte.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Mi suerte</h3>
+          <p>Morat</p>
+
+        </div>
+
+      </div>
+
+      <!-- MY KIND -->
+      <div
+        class="song-item playable"
+        data-song="mykindofwoman"
+      >
+
+        <img
+          src="covers/mykindofwoman.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>My Kind of Woman</h3>
+          <p>Lukas Graham</p>
+
+        </div>
+
+      </div>
+
+      <!-- OJITOS -->
+      <div
+        class="song-item playable"
+        data-song="ojitos"
+      >
+
+        <img
+          src="covers/ojitoscafes.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>Ojitos cafés</h3>
+          <p>Jos Canela</p>
+
+        </div>
+
+      </div>
+
+      <!-- THE ONLY -->
+      <div
+        class="song-item playable"
+        data-song="theonlyexception"
+      >
+
+        <img
+          src="covers/theonlyexception.jpg"
+          class="song-cover"
+        >
+
+        <div class="song-text">
+
+          <h3>The Only Exception</h3>
+          <p>Paramore</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- PLAYER -->
+  <div class="player-screen hidden" id="playerScreen">
+
+    <button
+      class="back-icon-btn"
+      id="quickBackBtn"
+      aria-label="Volver al inicio"
+    >
+      ←
+    </button>
+
+    <!-- TARJETA -->
+    <div class="player-card">
+
+      <img
+        id="playerCover"
+        class="player-cover"
+        src=""
+      >
+
+      <h2 id="playerTitle"></h2>
+
+      <p id="playerArtist"></p>
+
+    </div>
+
+    <!-- LETRAS -->
+    <div class="lyrics-container">
+
+      <span class="music-note note1">♪</span>
+      <span class="music-note note2">♫</span>
+      <span class="music-note note3">♩</span>
+      <span class="music-note note4">♬</span>
+
+      <p class="line current"></p>
+
+      <p class="line next"></p>
+
+    </div>
+
+    <!-- REACCIONES -->
+    <div
+      class="reactions"
+      id="reactions"
+    >
+
+      <button
+        class="reaction-btn"
+        data-emoji="💙"
+        aria-label="Reaccionar con corazon azul"
+      >
+        💙
+      </button>
+
+      <button
+        class="reaction-btn"
+        data-emoji="🥹"
+        aria-label="Reaccionar emocionada"
+      >
+        🥹
+      </button>
+
+      <button
+        class="reaction-btn"
+        data-emoji="✨"
+        aria-label="Reaccionar con brillo"
+      >
+        ✨
+      </button>
+
+      <button
+        class="reaction-btn"
+        data-emoji="😍"
+        aria-label="Reaccionar enamorada"
+      >
+        😍
+      </button>
+
+    </div>
+
+    <div
+      class="floating-reactions"
+      id="floatingReactions"
+    ></div>
+
+    <div
+      class="final-message hidden"
+      id="finalMessage"
+    ></div>
+
+    <!-- BOTONES -->
+    <div class="buttons">
+
+      <button id="backBtn">
+        Inicio
+      </button>
+
+      <button id="restartBtn">
+        Escuchar otra vez
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="audio"></audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
